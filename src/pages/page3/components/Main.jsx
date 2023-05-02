@@ -24,6 +24,7 @@ function Main() {
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
           Quisque volutpat mattis eros.
         </p>
+
         <div className="flex flex-row w-[280px]  justify-between p-4 bg-[#F6F8FF]">
           <div className="flex flex-col justify-center items-center">
             <div>repos</div>
