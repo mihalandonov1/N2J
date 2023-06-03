@@ -1,27 +1,22 @@
-import { useState } from "react";
-
-import project1 from "./projectsImages/project1.jpg";
-import project2 from "./projectsImages/project2.jpg";
 import MainPage1 from "./pages/page1/MainPage1";
-import { BrowserRouter, Link, NavLink, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MainPage2 from "./pages/page2/MainPage2";
-import NewTest from "./NewTest";
-import MainNav from "./MainNav";
+
 import MainPage3 from "./pages/page3/MainPage3";
+import MainPage4 from "./pages/page4/MainPage4";
+import MainPage5 from "./pages/page5/MainPage5";
+import MainNav from "./MainNav";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div>
-      <Routes>
-        <Route exact path="/page1" element={<MainPage1 />} />
-        <Route path="/page2" element={<MainPage2 />} />
-        <Route path="/page3" element={<MainPage3 />} />
-      </Routes>
-
-      <MainNav />
-    </div>
+    <Routes>
+      <Route path="/" element={<MainNav />} />
+      <Route path="page1" element={<MainPage1 />} />
+      <Route path="page2" element={<MainPage2 />} />
+      <Route path="page3" element={<MainPage3 />} />
+      <Route path="page4" element={<MainPage4 />} />
+      <Route path="page5" element={<MainPage5 />} />
+    </Routes>
   );
 }
 

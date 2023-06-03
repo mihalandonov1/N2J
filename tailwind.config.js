@@ -15,6 +15,7 @@ export default {
     fontFamily: {
       sans: "'Josefin Sans', sans-serif;",
       alata: "'Alata', sans-serif;",
+      space: "'Space Mono', monospace;",
     },
     width: {
       main: "68.75rem",
