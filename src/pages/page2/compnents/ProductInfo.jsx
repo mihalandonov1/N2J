@@ -3,7 +3,12 @@ import minus from "../icons/icon-minus.svg";
 import plus from "../icons/icon-plus.svg";
 import cart from "../icons/icon-cart.svg";
 
-function ProductInfo() {
+function ProductInfo({
+  handleIncrement,
+  handleDecrement,
+  quantity,
+  handleToCart,
+}) {
   return (
     <div className="w-full relative flex flex-col justify-center items-center ml-5 mr-5 mt-5 xl:mt-0 xl:w-[445px]">
       <div>
@@ -37,14 +42,14 @@ function ProductInfo() {
       </div>
       <div className="flex flex-col justify-between items-center xl:w-[445px] xl:flex-row">
         <div className="w-[19rem] h-[56px] flex justify-center items-center bg-[#F6F8FD] rounded-lg relative xl:w-[8rem]">
-          <div>0</div>
+          <div className="w-[20px] h-[20px] text-black">{quantity}</div>
           <div className="flex flex-row absolute w-[6rem] justify-between items-center">
-            <div className="flex cursor-pointer">
+            <button onClick={handleDecrement} className="flex cursor-pointer">
               <img src={minus} className="h-[4px]" />
-            </div>
-            <div className="flex cursor-pointer">
+            </button>
+            <button onClick={handleIncrement} className="flex cursor-pointer">
               <img src={plus} />
-            </div>
+            </button>
           </div>
         </div>
         <div className="w-[19rem] h-[56px] flex justify-center items-center cursor-pointer bg-[#FF7E1B] rounded-lg relative mt-5 mb-5 xl:w-[15rem]">
@@ -52,7 +57,12 @@ function ProductInfo() {
             <div>
               <img src={cart} className="h-[17px]" />
             </div>
-            <div className="text-white font-bold ml-2">Add to cart</div>
+            <button
+              onClick={handleToCart}
+              className="text-white font-bold ml-2"
+            >
+              Add to cart
+            </button>
           </div>
         </div>
       </div>
