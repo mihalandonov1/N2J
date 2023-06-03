@@ -7,57 +7,56 @@ import icon4 from "../images/icon-instagram.svg";
 
 function Footer() {
   return (
-    <div className="w-full h-18 flex justify-center items-center bg-black">
-      <div className="items-center w-icons h-22 flex flex-col justify-around text-white ml-10 mr-10">
-        <div className="w-icons flex justify-center">
-          <div className="h-10 w-main flex flex-wrap justify-between">
-            <img src={logo} className="flex ml-2" />
-            <div className="flex justify-around items-center mr-2">
-              <img src={icon1} className="mx-2 cursor-pointer" />
-              <img src={icon2} className="mx-2 cursor-pointer" />
-              <img src={icon3} className="mx-2 cursor-pointer" />
-              <img src={icon4} className="mx-2 cursor-pointer" />
-            </div>
-          </div>
+    <div className="w-full flex justify-center items-center bg-black">
+      <div className="flex flex-col sm:flex-row  justify-between items-center px-4 mx-6  max-w-[1100px] w-[100%]">
+        <div className="flex flex-col py-6 justify-between text-sm sm:w-[50%]">
+          <span className="flex justify-center sm:justify-start cursor-pointer">
+            <img src={logo} className="w-[144px]" />
+          </span>
+          <ul className="flex flex-col pt-5 gap-2 sm:flex-row text-white text-center capitalize">
+            <li className="cursor-pointer flex justify-center items-center relative">
+              <div className="flex">about</div>
+              <div className="absolute flex hover:border-b-2 w-[5%] sm:w-[50%] sm:hover:border-b h-[100%]"></div>
+            </li>
+            <li className="cursor-pointer flex justify-center items-center relative">
+              <div className="flex">careers</div>
+              <div className="absolute flex hover:border-b-2 w-[5%] sm:w-[50%] sm:hover:border-b h-[100%]"></div>
+            </li>
+            <li className="cursor-pointer flex justify-center items-center relative">
+              <div className="flex">events</div>
+              <div className="absolute flex hover:border-b-2 w-[5%] sm:w-[50%] sm:hover:border-b h-[100%]"></div>
+            </li>
+            <li className="cursor-pointer flex justify-center items-center relative">
+              <div className="flex">products</div>
+              <div className="absolute flex hover:border-b-2 w-[5%] sm:w-[50%] sm:hover:border-b h-[100%] "></div>
+            </li>
+            <li className="cursor-pointer flex justify-center items-center relative">
+              <div className="flex">support</div>
+              <div className="absolute flex hover:border-b-2 w-[5%] sm:w-[50%] sm:hover:border-b h-[100%]"></div>
+            </li>
+          </ul>
         </div>
-        <div className="w-icons flex flex-row justify-center">
-          <div className="w-main flex justify-between">
-            <ul className="w-menu flex flex-row capitalize items-center ml-2 justify-between">
-              <li className="flex flex-col relative justify-self-start">
-                <a href="/">about</a>
-                <div className="absolute flex items-center justify-center w-icons h-icons opacity-0 hover:opacity-100 cursor-pointer">
-                  <div className="border-b-2 w-half h-icons cursor-pointer"></div>
-                </div>
-              </li>
-              <li className="flex flex-col relative">
-                <a href="/">careers</a>
-                <div className="absolute flex items-center justify-center w-icons h-icons opacity-0 hover:opacity-100 cursor-pointer">
-                  <div className="border-b-2 w-half h-icons cursor-pointer"></div>
-                </div>
-              </li>
-              <li className="flex flex-col relative">
-                <a href="/">event</a>
-                <div className="absolute flex items-center justify-center w-icons h-icons opacity-0 hover:opacity-100 cursor-pointer">
-                  <div className="border-b-2 w-half h-icons cursor-pointer"></div>
-                </div>
-              </li>
-              <li className="flex flex-col relative">
-                <a href="/">products</a>
-                <div className="absolute flex items-center justify-center w-icons h-icons opacity-0 hover:opacity-100 cursor-pointer">
-                  <div className="border-b-2 w-half h-icons cursor-pointer"></div>
-                </div>
-              </li>
-              <li className="flex flex-col relative">
-                <a href="/">support</a>
-                <div className="absolute flex items-center justify-center w-icons h-icons opacity-0 hover:opacity-100 cursor-pointer">
-                  <div className="border-b-2 w-half h-icons cursor-pointer"></div>
-                </div>
-              </li>
-            </ul>
-
-            <div className="flex mr-2 opacity-50">
-              © 2021 Loopstudios. All rights reserved.
-            </div>
+        <div className="w-20 flex flex-col py-6 justify-between sm:w-[50%]">
+          <ul className="w-20 flex flex-row text-sm justify-center sm:justify-end sm:items-center">
+            <li className="w-[30px] h-[30px] cursor-pointer flex flex-col justify-center items-center ml-2">
+              <img src={icon1} className="w-[24px] flex  pb-2 relative" />
+              <div className="absolute w-[22px] h-[30px] hover:border-b-2 flex justify-center items-center bg-transperant"></div>
+            </li>
+            <li className="w-[30px] h-[30px] cursor-pointer flex justify-center items-center ml-2">
+              <img src={icon2} className="w-[24px] flex  pb-2 relative" />
+              <div className="absolute w-[22px] h-[30px] hover:border-b-2 flex justify-center items-center bg-transperant"></div>
+            </li>
+            <li className="w-[30px] h-[30px] cursor-pointer flex justify-center items-center ml-2">
+              <img src={icon3} className="w-[24px] flex  pb-2 relative" />
+              <div className="absolute w-[22px] h-[30px] hover:border-b-2 flex justify-center items-center bg-transperant"></div>
+            </li>
+            <li className="w-[30px] h-[30px] cursor-pointer flex justify-center items-center ml-2">
+              <img src={icon4} className="w-[24px] flex  pb-2 relative" />
+              <div className="absolute w-[22px] h-[30px] hover:border-b-2 flex justify-center items-center bg-transperant"></div>
+            </li>
+          </ul>
+          <div className="text-white pt-3 text-sm flex justify-center opacity-40 text-center sm:justify-end">
+            ©2021 Loopstudios.All rights reserved.
           </div>
         </div>
       </div>

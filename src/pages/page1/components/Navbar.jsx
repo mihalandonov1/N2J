@@ -1,45 +1,67 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../images/logo.svg";
+import hamburger from "../images/icon-hamburger.svg";
 
 function Navbar() {
+  const [nav, setNav] = useState(false);
+
+  function handlleNav() {
+    setNav(!nav);
+  }
+
   return (
-    <div className="h-vh justify-self-stretch justify-center flex ">
-      <div className="container mx-xl flex items-center justify-center mt-10 pt-10">
-        <div className="w-main flex items-center justify-between">
-          <img src={logo} className="h-8" />
-          <ul className="w-menu justify-evenly flex font-alata text-white capitalize">
-            <li className="flex flex-col relative">
-              <a href="/">about</a>
-              <div className="absolute flex items-center justify-center w-icons h-icons opacity-0 hover:opacity-100 cursor-pointer">
-                <div className="border-b-2 w-half h-icons cursor-pointer"></div>
+    <div className="w-full flex justify-center items-center h-[96px] sm:h-[96px] md:h-[96px]">
+      <div className="flex justify-between items-center px-4 mx-6  max-w-[1100px] w-[100%]">
+        <img src={logo} className="w-full cursor-pointer" />
+        <ul className="hidden sm:hidden md:flex capitalize text-white justify-end">
+          <li className="p-3 relative justify-center flex cursor-pointer">
+            <div className="absolute hover:border-b-2 w-[30px] h-[50%]"></div>
+            <div>about</div>
+          </li>
+          <li className="p-3 relative justify-center flex cursor-pointer">
+            <div className="absolute hover:border-b-2 w-[30px] h-[50%]"></div>
+            <div>careers</div>
+          </li>
+          <li className="p-3 relative justify-center flex cursor-pointer">
+            <div className="absolute hover:border-b-2 w-[30px] h-[50%]"></div>
+            <div>events</div>
+          </li>
+          <li className="p-3 relative justify-center flex cursor-pointer">
+            <div className="absolute hover:border-b-2 w-[30px] h-[50%]"></div>
+            <div>products</div>
+          </li>
+          <li className="p-3 relative justify-center flex cursor-pointer">
+            <div className="absolute hover:border-b-2 w-[30px] h-[50%]"></div>
+            <div>support</div>
+          </li>
+        </ul>
+        <img
+          onClick={handlleNav}
+          src={hamburger}
+          className="flex flex-col cursor-pointer p-4 sm:flex md:hidden"
+        />
+        {nav === true ? (
+          <div className="fixed left-0 top-0 w-[100%] h-[100%] z-50 bg-black sm:fixed md:hidden">
+            <div className="flex  mx-auto text-white justify-between items-center pt-10 p-4">
+              <img src={logo} className="flex cursor-pointer" />
+              <div
+                onClick={handlleNav}
+                className="flex text-2xl mt-2 cursor-pointer"
+              >
+                X
               </div>
-            </li>
-            <li className="flex flex-col relative">
-              <a href="/">careers</a>
-              <div className="absolute flex items-center justify-center w-icons h-icons opacity-0 hover:opacity-100 cursor-pointer">
-                <div className="border-b-2 w-half h-icons cursor-pointer"></div>
-              </div>
-            </li>
-            <li className="flex flex-col relative">
-              <a href="/">event</a>
-              <div className="absolute flex items-center justify-center w-icons h-icons opacity-0 hover:opacity-100 cursor-pointer">
-                <div className="border-b-2 w-half h-icons cursor-pointer"></div>
-              </div>
-            </li>
-            <li className="flex flex-col relative">
-              <a href="/">products</a>
-              <div className="absolute flex items-center justify-center w-icons h-icons opacity-0 hover:opacity-100 cursor-pointer">
-                <div className="border-b-2 w-half h-icons cursor-pointer"></div>
-              </div>
-            </li>
-            <li className="flex flex-col relative">
-              <a href="/">support</a>
-              <div className="absolute flex items-center justify-center w-icons h-icons opacity-0 hover:opacity-100 cursor-pointer">
-                <div className="border-b-2 w-half h-icons cursor-pointer"></div>
-              </div>
-            </li>
-          </ul>
-        </div>
+            </div>
+            <ul className="pt-24 uppercase text-white flex flex-col gap-y-4 text-2xl font-thin">
+              <li className="p-4 cursor-pointer hover:opacity-70">about</li>
+              <li className="p-4 cursor-pointer hover:opacity-70">careers</li>
+              <li className="p-4 cursor-pointer hover:opacity-70">events</li>
+              <li className="p-4 cursor-pointer hover:opacity-70">products</li>
+              <li className="p-4 cursor-pointer hover:opacity-70">support</li>
+            </ul>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );
