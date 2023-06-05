@@ -12,12 +12,10 @@ function Navbar({ price, quantity, toCart, handleDelete }) {
   const [hamburger, setHamburger] = useState(false);
 
   function handleHamburger(e) {
-    console.log("clicked");
     setHamburger(!hamburger);
   }
 
   function handleShowCart(e) {
-    console.log("clicked");
     setShowCart(!showCart);
   }
 
@@ -27,7 +25,7 @@ function Navbar({ price, quantity, toCart, handleDelete }) {
         <div className="h-[26px] flex flex-row items-center justify-center">
           <div
             onClick={handleHamburger}
-            className={`w-hamburger mr-3 md:hidden`}
+            className={`w-hamburger cursor-pointer mr-3 md:hidden`}
           >
             <div className="pl-1 border-hamburgerborder border-gray-500"></div>
             <div className="pl-1 border-hamburgerborder border-gray-500 mt-1"></div>
@@ -43,21 +41,31 @@ function Navbar({ price, quantity, toCart, handleDelete }) {
             src={logo}
           />
           <div className="hidden md:flex md:w-[24rem] md:h-[28px] xl:flex xl:w-[26rem] xl:h-[28px]">
-            <ul className="w-[26rem] h-[28px] capitalize flex items-center justify-around ml-10">
-              <li className="hover:border-b-4 h-[65px] mt-11 hover:border-b-orange-400">
-                <p className="cursor-pointer">collection</p>
+            <ul className="w-[26rem] h-[28px] capitalize flex items-center justify-around ml-10 ">
+              <li>
+                <p className="hover:border-b-4 h-[65px] mt-11 hover:border-b-orange-400 cursor-pointer opacity-40 hover:opacity-100">
+                  collection
+                </p>
               </li>
-              <li className="hover:border-b-4 h-[65px] mt-11 hover:border-b-orange-400">
-                <p className="cursor-pointer">men</p>
+              <li>
+                <p className="hover:border-b-4 h-[65px] mt-11 hover:border-b-orange-400 cursor-pointer  opacity-40 hover:opacity-100">
+                  men
+                </p>
               </li>
-              <li className="hover:border-b-4 h-[65px] mt-11 hover:border-b-orange-400">
-                <p className="cursor-pointer">women</p>
+              <li>
+                <p className="hover:border-b-4 h-[65px] mt-11 hover:border-b-orange-400 cursor-pointer  opacity-40 hover:opacity-100">
+                  women
+                </p>
               </li>
-              <li className="hover:border-b-4 h-[65px] mt-11 hover:border-b-orange-400">
-                <p className="cursor-pointer">about</p>
+              <li>
+                <p className="hover:border-b-4 h-[65px] mt-11 hover:border-b-orange-400 cursor-pointer opacity-40 hover:opacity-100">
+                  about
+                </p>
               </li>
-              <li className="hover:border-b-4 h-[65px] mt-11 hover:border-b-orange-400">
-                <p className="cursor-pointer">contact</p>
+              <li>
+                <p className="hover:border-b-4 h-[65px] mt-11 hover:border-b-orange-400 cursor-pointer  opacity-40 hover:opacity-100">
+                  contact
+                </p>
               </li>
             </ul>
           </div>
@@ -80,7 +88,7 @@ function Navbar({ price, quantity, toCart, handleDelete }) {
             <div
               className={`${
                 showCart == true ? "" : "hidden"
-              } absolute flex-row mt-[300px] z-50 drop-shadow-2xl cursor-default  w-[400px] sm:w-[300px] sm:jusify-center sm:mr-[200px]`}
+              } absolute w-[360px] h-[260px] flex flex-col mt-[380px] mr-[254px] xl:mr-[0px] xl:mt-[330px] z-50 drop-shadow-2xl cursor-default  `}
             >
               <Basket
                 price={price}

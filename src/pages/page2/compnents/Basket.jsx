@@ -4,10 +4,10 @@ import deleteIcon from "../icons/icon-delete.svg";
 
 function Basket({ price, toCart, handleDelete }) {
   return (
-    <div className="absolute -z-50 flex-col w-[500px] h-[500px] sm:h-[256px] sm:w-[360px]  border-2 top-[-100px] md:left-[-100px] sm:left-[-200px] left-[-270px] items-center bg-white">
+    <div className="w-[100%] h-[100%] flex flex-col bg-white z-50  rounded-lg">
       <div className="flex justify-start items-center ">
-        <div className="w-[360px] h-[56px] border-b-2 flex items-center justify-center">
-          <p className="w-[312px] flex justify-start font-bold">Cart</p>
+        <div className="w-[100%] h-[56px] border-b flex items-center justify-start">
+          <p className=" flex p-4 font-bold">Cart</p>
         </div>
       </div>
 
@@ -15,14 +15,16 @@ function Basket({ price, toCart, handleDelete }) {
         <div className="">
           <div className="flex items-center justify-center mt-7">
             <div className="w-[312px] h-[56px] flex items-center justify-center">
-              <div className="w-[312px]  flex flex-row justify-between">
+              <div className="w-[312px]  flex flex-row justify-between font-light">
                 <div className="w-[50px] h-[50px] mr-2">
                   <img src={pic1} className="rounded-lg" />
                 </div>
                 <div>
-                  <div>Fall Limited Edition Sneakers</div>
+                  <div className="opacity-50">
+                    Fall Limited Edition Sneakers
+                  </div>
                   <div className="flex flex-row">
-                    <p>
+                    <p className="opacity-50">
                       ${price.toFixed(2)} x {toCart}
                     </p>
                     <p className="font-bold ml-3">
@@ -51,7 +53,7 @@ function Basket({ price, toCart, handleDelete }) {
       ) : (
         <div className="h-[80%]  flex justify-center items-center">
           <div className="flex justify-center items-center">
-            <p className="flex font-bold">Your cart is empty</p>
+            <p className="flex font-bold opacity-40">Your cart is empty</p>
           </div>
         </div>
       )}

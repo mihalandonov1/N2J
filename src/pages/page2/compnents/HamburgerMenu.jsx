@@ -9,7 +9,11 @@ function HamburgerMenu({ hamburger, setHamburger, handleHamburger }) {
       }   `}
     >
       <div className="w-[250px] h-[200vh] bg-white ">
-        <img onClick={handleHamburger} src={close} className="pt-5 ml-5" />
+        <img
+          onClick={handleHamburger}
+          src={close}
+          className="pt-5 ml-5 cursor-pointer"
+        />
         <ul className="w-[95px] capitalize pt-5 pl-5 ">
           <li className="mt-2 text-xl font-extrabold">collection</li>
           <li className="mt-2 text-xl font-extrabold">men</li>
