@@ -10,8 +10,6 @@ import MainNav from "./MainNav";
 import MainPage3 from "./pages/page3/MainPage3";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div>
       <Routes>
@@ -20,7 +18,7 @@ function App() {
         <Route path="/page3" element={<MainPage3 />} />
       </Routes>
 
-      <MainNav />
+      <MainPage1 />
     </div>
   );
 }

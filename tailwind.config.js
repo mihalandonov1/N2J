@@ -15,6 +15,8 @@ export default {
     fontFamily: {
       sans: "'Josefin Sans', sans-serif;",
       alata: "'Alata', sans-serif;",
+      kumbh: "'Kumbh Sans', sans-serif",
+      ibm: "'IBM Plex Sans', sans-serif",
     },
     width: {
       main: "68.75rem",
@@ -40,6 +42,10 @@ export default {
         "footer-texture": "url('/img/footer-texture.png')",
         "deep-earth":
           "url('/src/pages/page1/images/desktop/image-deep-earth.jpg')",
+        "mobile-pattern": "url('./src/pages/page5/assets/bg-main-mobile.png')",
+        "tablet-pattern": "url('./src/pages/page5/assets/bg-main-tablet.png')",
+        "desktop-pattern":
+          "url('./src/pages/page5/assets/bg-main-desktop.png')",
         ecommerse: "url('/src/pages/page2/images/image-product-1.jpg')",
       },
 

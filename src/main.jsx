@@ -8,9 +8,10 @@ import NewTest from "./NewTest";
 import { BrowserRouter } from "react-router-dom";
 import MainPage3 from "./pages/page3/MainPage3";
 import MainPage1 from "./pages/page1/MainPage1";
+import MainPage5 from "./pages/page5/MainPage5";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
-    <MainPage1 />
+    <MainPage3 />
   </BrowserRouter>
 );
