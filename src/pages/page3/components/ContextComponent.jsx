@@ -9,18 +9,18 @@ const ContextComponent = () => {
   const toggleTheme = useThemeUpdate();
 
   const themeStyles = {
-    backgroundColor: darkTheme ? "#1E2A47" : "#F6F8FF",
+    backgroundColor: darkTheme ? "#1E2A47" : "#FFFFFF",
     color: darkTheme ? "#FFFFFF" : "#4B6A9B",
   };
 
   const lightTheme = {
-    backgroundColor: darkTheme ? "#141D2F" : "#FEFEFE",
+    backgroundColor: darkTheme ? "#141D2F" : "#F6F8FF",
     color: darkTheme ? "#FFFFFF" : "#333333",
   };
   return (
     <div
       style={lightTheme}
-      className="grid bg-[#141D2F] h-[800px] justify-center pt-10 font-space"
+      className="grid bg-[#141D2F] h-[1000px] justify-center pt-10 font-space"
     >
       <div style={lightTheme}>
         <Header

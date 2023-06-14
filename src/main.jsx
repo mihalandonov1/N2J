@@ -9,6 +9,6 @@ import MainPage2 from "./pages/page2/MainPage2";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
-    <MainPage2 />
+    <MainPage3 />
   </BrowserRouter>
 );

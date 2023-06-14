@@ -13,7 +13,7 @@ function Main(props) {
   return (
     <div
       style={themeStyle}
-      className="mb-10 flex flex-col max-w-[730px]  mx-6 rounded-2xl drop-shadow-2xl sm:mx-10 md:mx-20 lg:justify-center"
+      className="mb-10 flex flex-col w-[730px]  mx-6 rounded-2xl drop-shadow-2xl sm:mx-10 md:mx-20 lg:justify-center font-space"
     >
       <div className="flex flex-row m-6 sm:mx-10 sm:m-0 sm:mt-10 lg:justify-between lg:mx-12 lg:">
         <div className="rounded-full ">
@@ -59,25 +59,31 @@ function Main(props) {
         className="flex mx-6 rounded-xl justify-start items-center sm:mx-10  lg:mx-12 lg:w-[65%] lg:self-end"
       >
         <div className="flex flex-col justify-center items-center p-3 mr-auto sm:items-start sm:ml-6">
-          <h4 className="m-1 text-[13px] font-extralight  capitalize">repos</h4>
+          <h4 className="m-1 text-[13px] text-[#4B6A9B] font-thin  capitalize">
+            repos
+          </h4>
           <div className="m-1 font-bold sm:text-xl">{props.public_repos}</div>
         </div>
         <div className="flex flex-col justify-center items-center mr-auto sm:items-start">
-          <h4 className="m-1 text-[13px]  capitalize">followers</h4>
+          <h4 className="m-1 text-[13px] text-[#4B6A9B] capitalize">
+            followers
+          </h4>
           <div className="m-1 font-bold sm:text-xl">{props.followers}</div>
         </div>
         <div className="flex flex-col justify-center items-center mr-auto sm:items-start">
-          <h4 className="m-1 text-[13px]  capitalize">following</h4>
+          <h4 className="m-1 text-[13px] text-[#4B6A9B] capitalize">
+            following
+          </h4>
           <div className="m-1 font-bold sm:text-xl">{props.following}</div>
         </div>
       </div>
 
-      <div className="flex flex-col m-6 text-sm sm:flex-row sm:m-0 sm:mx-10 sm:my-6 sm:text-base  lg:mx-12 lg:w-[65%] lg:self-end">
-        <div className="flex flex-col sm:w-[50%]">
+      <div className="flex flex-col m-1 text-sm sm:flex-row sm:m-0 sm:mx-20 sm:my-6 sm:text-base  lg:mx-12 items-center justify-between lg:self-end">
+        <div className="flex flex-col sm:w-[240px]">
           <div className="flex m-2 items-center justify-start">
             <div style={themeStyle}>
               {props.location !== null ? (
-                <div className="h-[20px] flex flex-row items-center">
+                <div className=" flex flex-row items-center">
                   <LocationIcon />
                   <div className="ml-5">{props.location}</div>
                 </div>
@@ -85,7 +91,7 @@ function Main(props) {
                 <>
                   <div
                     style={themeStyle}
-                    className="h-[20px] flex flex-row items-center  opacity-50"
+                    className=" flex flex-row items-center  opacity-50"
                   >
                     <LocationIcon />
                     <div className=" flex ml-5">Not Avaible</div>
@@ -98,7 +104,7 @@ function Main(props) {
           <div className="flex m-2 items-center justify-start">
             <div style={themeStyle}>
               {props.blog !== null ? (
-                <div className="h-[20px] flex flex-row items-center">
+                <div className=" flex flex-row items-center">
                   <LinkIcon />
                   <a href={props.blog} className="ml-5 hover:underline">
                     {props.blog}
@@ -106,7 +112,7 @@ function Main(props) {
                 </div>
               ) : (
                 <>
-                  <div className="h-[20px] flex flex-row opacity-50 items-center">
+                  <div className=" flex flex-row opacity-50 items-center">
                     <LinkIcon />
                     <div className=" ml-5 flex">Not Avaible</div>
                   </div>
@@ -116,24 +122,22 @@ function Main(props) {
           </div>
         </div>
 
-        <div className="flex flex-col">
-          <div className="flex m-2 items-center justify-start">
+        <div className="flex flex-col p-2 justify-center mt-2 items-start w-[240px]">
+          <div className="flex-row  items-center justify-start">
             <div style={themeStyle}>
               {props.twitter_username !== null ? (
-                <div className="mr-5 w-[20px] h-[20px]">
+                <div className="m-8 ml-8">
                   <TwitterIcon />
-                  <div className="ml-5">{props.twitter_username}</div>
+                  <div className="ml-8">{props.twitter_username}</div>
                 </div>
               ) : (
-                <>
-                  <div
-                    style={themeStyle}
-                    className="h-[20px] flex flex-row items-center opacity-50"
-                  >
-                    <TwitterIcon />
-                    <div className="ml-5 flex">Not Avaible</div>
-                  </div>
-                </>
+                <div
+                  style={themeStyle}
+                  className="ml-1 flex flex-row items-center justify-center opacity-50"
+                >
+                  <TwitterIcon />
+                  <div className="ml-6 flex">Not Avaible</div>
+                </div>
               )}
             </div>
           </div>
@@ -141,15 +145,15 @@ function Main(props) {
           <div className="flex m-2 items-center justify-start">
             <div style={themeStyle}>
               {props.company !== null ? (
-                <div className="h-[20px] flex flex-row items-center">
+                <div className=" flex flex-row items-center justify-center">
                   <CompanyIcon />
-                  <div className="ml-5">{props.company}</div>
+                  <div className="ml-4 flex">{props.company}</div>
                 </div>
               ) : (
                 <>
-                  <div className="h-[20px] flex flex-row items-center opacity-50">
+                  <div className="m-2 flex flex-row items-center justify-start opacity-50">
                     <CompanyIcon />
-                    <div className="text-[#FFFFFF] ml-5 flex">Not Avaible</div>
+                    <div className=" ml-5 flex">Not Avaible</div>
                   </div>
                 </>
               )}
